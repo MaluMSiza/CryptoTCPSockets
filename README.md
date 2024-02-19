@@ -8,8 +8,8 @@ e o protocolo de troca de chaves Diffie-Hellman para estabelecer uma chave compa
 
 - `tcpServer.py`: O arquivo contendo a implementação do servidor TCP.
 - `tcpClient.py`: O arquivo contendo a implementação do cliente TCP.
-- `caesar_cipher.py`: O arquivo contendo a implementação da cifra de César para criptografia.
-- `diffie_hellman.py`: O arquivo contendo a implementação do protocolo de troca de chaves Diffie-Hellman.
+- `caesar_cipher.py`: O arquivo contendo a implementação da cifra de César para criptografia para teste sem servidor.
+- `diffie_hellman.py`: O arquivo contendo a implementação do protocolo de troca de chaves Diffie-Hellman para teste sem servidor.
 
 ## Pré-requisitos
 
