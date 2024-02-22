@@ -15,6 +15,48 @@ def caesar_cipher(bytes_data, int_chave):
         encrypted_byte = (byte + int_chave) % 256  # Ajusta para o intervalo de bytes (0-255)
         encrypted_bytes.append(encrypted_byte)
     return bytes(encrypted_bytes)
+    
+def bytes_to_uppercase(byte_sequence):
+    # Converte a sequência de bytes em uma string
+    string = byte_sequence.decode("utf-8")
+    
+    # Tabela de conversão para caracteres acentuados
+    conversion_table = {
+        'á': 'Á',
+        'à': 'À',
+        'â': 'Â',
+        'ã': 'Ã',
+        'ä': 'Ä',
+        'é': 'É',
+        'è': 'È',
+        'ê': 'Ê',
+        'ë': 'Ë',
+        'í': 'Í',
+        'ì': 'Ì',
+        'î': 'Î',
+        'ï': 'Ï',
+        'ó': 'Ó',
+        'ò': 'Ò',
+        'ô': 'Ô',
+        'õ': 'Õ',
+        'ö': 'Ö',
+        'ú': 'Ú',
+        'ù': 'Ù',
+        'û': 'Û',
+        'ü': 'Ü',
+        'ç': 'Ç'
+    }
+    
+    # Realiza a conversão caractere a caractere
+    uppercase_string = ''.join(conversion_table.get(char, char.upper()) for char in string)
+    
+    return uppercase_string  # Retorna a string resultante
+
+# Exemplo de uso:
+str = "olá"
+byte_sequence = bytes(str.encode("utf-8"))
+uppercase_string = bytes_to_uppercase(byte_sequence)
+print(uppercase_string)  # Saída: OLÁ
 
 
 
